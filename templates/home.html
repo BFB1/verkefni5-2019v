@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block title %}Skráning{% endblock %}
+
+{% block content %}
+<form action="http://localhost:5000/results" method="POST">
+    <label>
+        Nafn
+        <input type="text" name="name" required>
+    </label>
+    <label>
+        Heimilisfang
+        <input type="text" name="address" required>
+    </label>
+    <label>
+        Tölvupóstur
+        <input type="email" name="email" required>
+    </label>
+    <label>
+        Símanúmer
+        <input type="text" name="phone" pattern="^\d{7}$" required>
+    </label>
+
+    <h4>Fyrir hádegi</h4>
+    <label>
+        <input type='checkbox' name="AmCourse" value="Python">Python
+        <input type='checkbox' name="AmCourse" value="Javascript">Javascript
+        <input type='checkbox' name="AmCourse" value="Gagnasöfn">Gagnasöfn
+    </label>
+    <h4>Hádegismatur</h4>
+    <label>
+        <input type='radio' name="lunch" value="Já">Já takk
+        <input type='radio' name="lunch" value="Nei">Nei takk
+    </label>
+    <h4>Eftir hádegi</h4>
+    <label>
+        <input type='checkbox' name="PmCourse" value="Python 2">Python 2
+        <input type='checkbox' name="PmCourse" value="Javascript 2">Javascript 2
+        <input type='checkbox' name="PmCourse" value="Gagnasöfn 2">Gagnasöfn 2
+    </label>
+
+    <input type="submit" name="submit" value="Submit">
+    <input type="reset" name="Reset">
+
+</form>
+{% endblock %}

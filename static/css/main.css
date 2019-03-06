@@ -1,0 +1,25 @@
+ul {
+    padding: 0;
+}
+a {
+    color: black;
+}
+img {
+    width: 5em;
+    height: auto;
+}
+
+.wrapper {
+    margin: 2em auto auto;
+    width: 70%;
+    text-align: center;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"], input[type="email"] {
+    display: block;
+    margin: auto;
+}
